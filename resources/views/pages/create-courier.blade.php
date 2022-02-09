@@ -37,8 +37,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Add New Courier</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"><a href="javascript:void(0);">Create New</a></li>
+                                <li class="breadcrumb-item"><a href="#">Add New Courier</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><a href="#">Create New</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -166,7 +166,7 @@
                 var location = value.split('-');         //break value in js split
                 for(var i = 0; i < location.length; i++){
            
-                    
+
                 $('#search').val(value);
                 $('#location').val(location[1]);
                 $('#telephone_no').val(location[2]);

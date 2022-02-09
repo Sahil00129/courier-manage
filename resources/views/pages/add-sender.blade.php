@@ -8,8 +8,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Forms</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"><a href="javascript:void(0);">Layouts</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><a href="javascript:void(0);">Add Sender</a></li>
                             </ol>
                         </nav>
                     </div>

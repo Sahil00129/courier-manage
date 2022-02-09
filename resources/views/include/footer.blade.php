@@ -25,28 +25,28 @@
             App.init();
         });
     </script>
-    <script src="assets/js/custom.js"></script>
+    <script src="{{asset('assets/js/custom.js')}}"></script>
 
       <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
-      <script src="plugins/table/datatable/datatables.js"></script>
+      <script src="{{asset('plugins/table/datatable/datatables.js')}}"></script>
     <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
-    <script src="plugins/table/datatable/button-ext/dataTables.buttons.min.js"></script>
-    <script src="plugins/table/datatable/button-ext/jszip.min.js"></script>    
-    <script src="plugins/table/datatable/button-ext/buttons.html5.min.js"></script>
-    <script src="plugins/table/datatable/button-ext/buttons.print.min.js"></script>
+    <script src="{{asset('plugins/table/datatable/button-ext/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('plugins/table/datatable/button-ext/jszip.min.js')}}"></script>    
+    <script src="{{asset('plugins/table/datatable/button-ext/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('plugins/table/datatable/button-ext/buttons.print.min.js')}}"></script>
 
        <!-- BEGIN THEME GLOBAL STYLE -->
-       <script src="assets/js/scrollspyNav.js"></script>
-       <script src="plugins/sweetalerts/sweetalert2.min.js"></script>
-       <script src="plugins/sweetalerts/custom-sweetalert.js"></script>
+       <script src="{{asset('assets/js/scrollspyNav.js')}}"></script>
+       <script src="{{asset('plugins/sweetalerts/sweetalert2.min.js')}}"></script>
+       <script src="{{asset('plugins/sweetalerts/custom-sweetalert.js')}}"></script>
     <!-- END THEME GLOBAL STYLE --> 
 
 
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="plugins/apex/apexcharts.min.js"></script>
-    <script src="assets/js/dashboard/dash_2.js"></script>
+    <script src="{{asset('plugins/apex/apexcharts.min.js')}}"></script>
+    <script src="{{asset('assets/js/dashboard/dash_2.js')}}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="{{ asset('js/import.js') }}"></script>
@@ -137,7 +137,7 @@
 			});
 			
 		});
-	});
+	}); 
 </script>
 
 
@@ -162,7 +162,7 @@
 	});
 </script>
 
-<script>
+<!--<script>
 $('.delete-confirm').on('click', function () {
     alert('h');
   swal({
@@ -182,7 +182,7 @@ $('.delete-confirm').on('click', function () {
       }
     })
 })
- </script>
+ </script>  -->
  
     @if(Session::has('update'))
     <script>
@@ -195,4 +195,24 @@ $('.delete-confirm').on('click', function () {
 	 swal("Deleted", "Data has been Deleted","success");
   </script>
 	 @endif
-   
+  <!-- courier table --> 
+     <script>
+       $(document).ready(function(){
+		//alert('h'); die;
+		$(document).on('click','.editcourier', function(){
+			var for_id = $(this).val();
+			alert(for_id ); 
+			$('#xtra').modal('show');
+			$.ajax({
+				type: "GET",
+				url: "/edit-company/"+for_id,
+				success: function(response){
+					//console.log(response.nw);
+					$('#for_company').val(response.forcomp.for_company);
+					$('#for_id').val(for_id);
+				}
+			});
+			
+		});
+	});
+</script>
