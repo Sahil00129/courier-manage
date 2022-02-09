@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/table/datatable/dt-global_style.css">
     <!-- END PAGE LEVEL CUSTOM STYLES -->
 <div class="layout-px-spacing">
-                <div class="page-header">
+                <div class="page-header"> 
                     <nav class="breadcrumb-one" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>

@@ -68,7 +68,7 @@
                                          </div>
                                          <div class="form-group col-md-4">
                                              <label for="inputPassword4">Location</label>
-                                             <input type="text" class="form-control" id="location" name="location" placeholder="">
+                                             <input type="text" class="form-control" id="location" name="location" placeholder="" readonly="readonly">
                                          </div>
                                          <div class="form-group col-md-4">
                                              <label for="inputPassword4">Telephone No.</label>
@@ -82,14 +82,20 @@
                                     
                                        <div class="form-group col-md-4">
                                                <label for="inputState">Courier Name</label>
-                                                  <select id="slct" name="slct" class="form-control">
+                                                  <select id="slct" name="slct" class="form-control" onchange="yesnoCheck(this);">
                                                   <option selected disabled>Select..</option>
                                                   @foreach($couriers as $courier)
                                                   <option value="{{$courier->courier_name}}">{{$courier->courier_name}}</option>
                                                   @endforeach
                                                   <option>Other</option>
-                                        </select>
+                                        </select><br>
+                                        <!--courier other field -->
+                                     <div id="ifYes" style="display: none">
+                                         <input type="text" class="form-control" id="other" name="other"  placeholder="Other" autocomplete="off">
                                     </div>
+                                        <!-- end -->
+                                    </div>
+                                    
                                     <div class="form-group col-md-4">
                                         <label for="inputPassword4">Docket No.</label>
                                         <input type="text" class="form-control" id="docket_no" name="docket_no" placeholder="" autocomplete="off">
@@ -99,6 +105,7 @@
                                         <input type="date" class="form-control" id="docket_date" name="docket_date" placeholder="">
                                     </div>
                                 </div>
+                                
                                 <h5><b>Document Details</b></h5>
                                 <div class="form-row mb-4">
                                 <div class="form-group col-md-6">
@@ -136,6 +143,7 @@
                 </div>
                 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
                 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
                 <script type="text/javascript">
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
        $(document).ready(function(){
@@ -158,18 +166,24 @@
                 var location = value.split('-');         //break value in js split
                 for(var i = 0; i < location.length; i++){
            
-
+                    
                 $('#search').val(value);
                 $('#location').val(location[1]);
                 $('#telephone_no').val(location[2]);
                 $('#product_list').html("");
                 }
             });
-   
+
 });
 </script>
 
-
-
-
+<script>
+     function yesnoCheck(that) {
+    if (that.value == "Other") {
+        document.getElementById("ifYes").style.display = "block";
+    } else {
+        document.getElementById("ifYes").style.display = "none";
+    }
+}
+</script>
 @endsection
