@@ -68,7 +68,7 @@
                                                 
                                                     <div class="form-group col-md-6">
                                                 <label for="inputEmail4">Catagories</label>
-                                                <input type="text" class="form-control" id="catagories" name="catagories"  placeholder="" autocomplete="off">
+                                                <input type="text" class="form-control" id="catagories" name="catagories"  placeholder="" autocomplete="off" required>
                                                  </div>   
     
                                                     </div>
@@ -82,8 +82,5 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
 
 @endsection

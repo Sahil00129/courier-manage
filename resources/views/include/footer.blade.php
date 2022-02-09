@@ -118,6 +118,7 @@
 		});
 	});
 </script>
+
 <script>
         $(document).ready(function(){
 		//alert('h'); die;
@@ -139,4 +140,59 @@
 	});
 </script>
 
+
+<script>
+       $(document).ready(function(){
+		//alert('h'); die;
+		$(document).on('click','.editbtn', function(){
+			var for_id = $(this).val();
+			//alert(for_id ); 
+			$('#editModal').modal('show');
+			$.ajax({
+				type: "GET",
+				url: "/edit-company/"+for_id,
+				success: function(response){
+					//console.log(response.nw);
+					$('#for_company').val(response.forcomp.for_company);
+					$('#for_id').val(for_id);
+				}
+			});
+			
+		});
+	});
+</script>
+
+<script>
+$('.delete-confirm').on('click', function () {
+    alert('h');
+  swal({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Delete',
+      padding: '2em'
+    }).then(function(result) {
+      if (result.value) {
+        swal(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+})
+ </script>
+ 
+    @if(Session::has('update'))
+    <script>
+  	swal("Updated", "Data has been successfully updated","success");
+    </script>
+    @endif
+   
+    @if(Session::has('deleted'))
+  <script>
+	 swal("Deleted", "Data has been Deleted","success");
+  </script>
+	 @endif
    
