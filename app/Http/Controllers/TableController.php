@@ -48,8 +48,18 @@ class TableController extends Controller
       Session::flash('update', 'Data has been updated successfully');
       $addcourier->update();
      return redirect()->back();
-
     }
+  
+    public function destroycourierCompany($courier_id)
+    {
+       $courier = CourierCompany::find($courier_id); 
+       //Session::flash('delete', 'deleted');
+       $courier->delete();
+       Session::flash('deleted', 'Data has been deleted');
+       return redirect()->back();
+    }
+
+
      ////////////////////Category//////////////////////
      public function editCat($id)
      {
@@ -102,5 +112,15 @@ class TableController extends Controller
      return redirect()->back();
 
     }
+
+      public function destroyforCompany($forcompany_id)
+      {
+        $forcompany = ForCompany::find($forcompany_id); 
+        //Session::flash('delete', 'deleted');
+        $forcompany->delete();
+        Session::flash('deleted', 'Data has been deleted');
+        return redirect()->back();
+      }
+
 
 }
