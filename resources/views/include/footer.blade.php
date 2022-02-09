@@ -196,23 +196,4 @@ $('.delete-confirm').on('click', function () {
   </script>
 	 @endif
   <!-- courier table --> 
-     <script>
-       $(document).ready(function(){
-		//alert('h'); die;
-		$(document).on('click','.editcourier', function(){
-			var for_id = $(this).val();
-			alert(for_id ); 
-			$('#xtra').modal('show');
-			$.ajax({
-				type: "GET",
-				url: "/edit-company/"+for_id,
-				success: function(response){
-					//console.log(response.nw);
-					$('#for_company').val(response.forcomp.for_company);
-					$('#for_id').val(for_id);
-				}
-			});
-			
-		});
-	});
-</script>
+    
