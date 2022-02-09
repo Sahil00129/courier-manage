@@ -30,7 +30,7 @@ $(document).ready(function (e) {
                       success: (data) => {
                         $(".indicator-progress").hide();
                         $(".indicator-label").show();
-                        $('#kt_modal_upload_csv').trigger('reset');
+                        $('#new_sender_import').trigger('reset');
                       //this.reset();
                       //console.log(data.ignoredItems);
                       //console.log(data.ignoredcount);
