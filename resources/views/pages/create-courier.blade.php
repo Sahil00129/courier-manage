@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Dashboard')
+@section('title', 'Create Courier')
 @section('content')
 <style>
 .list-group{

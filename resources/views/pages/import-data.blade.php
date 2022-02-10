@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Dashboard')
+@section('title', 'Import Data')
 @section('content')
 <style>
 @media only screen and (max-width: 767px) {

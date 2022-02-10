@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Sender-List')
+@section('title', 'For')
 @section('content')
   <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
   <link rel="stylesheet" type="text/css" href="plugins/table/datatable/datatables.css">
