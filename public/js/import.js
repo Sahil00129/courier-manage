@@ -1,3 +1,4 @@
+//////////////////////////////////Import Master///////////////////////
 $(document).ready(function (e) {
     //alert('h');
     $('#new_sender_import').submit(function(e) {
@@ -96,7 +97,7 @@ $('#new_sender_add').submit(function(e) {
         }); 
     });	
 
-    ///////////////////////////////////////////////////
+    /////////////////////////New Courier Create//////////////////////////
     	//alert('h'); die;
 		$('#new_courier_create').submit(function(e) {
             e.preventDefault();

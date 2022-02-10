@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Dashboard')
+@section('title', 'Add Sender')
 @section('content')
 
 <div class="container">
