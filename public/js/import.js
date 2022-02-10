@@ -23,13 +23,14 @@ $(document).ready(function (e) {
                     processData: false,
                     contentType: false,
                     beforeSend: function(){
-                        $(".indicator-progress").show(); 
-                        $(".indicator-label").hide();
-                        
+                      $(".indicator-progress").show(); 
+                      $(".indicator-label").hide();
+                         
                        },
                       success: (data) => {
                         $(".indicator-progress").hide();
                         $(".indicator-label").show();
+                       
                         $('#new_sender_import').trigger('reset');
                       //this.reset();
                       //console.log(data.ignoredItems);

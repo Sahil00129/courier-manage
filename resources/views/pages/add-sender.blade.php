@@ -73,7 +73,9 @@
                                      <input type="text" class="form-control" name="telephone_no" id="telephone_no" placeholder="" autocomplete="off">
                                      </div>
                                      </div>
-                                      <button type="submit" class="btn btn-primary mt-3">Save</button>
+                                     <button type="submit" class="btn btn-primary"><span class="indicator-label">Save</span>
+		                            <span class="indicator-progress" style="display: none;">Please wait...
+	                            	<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span></button> 
                                       
                                     </form>
        

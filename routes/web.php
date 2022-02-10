@@ -11,6 +11,7 @@ use App\Http\Controllers\ImportExportController;
 use App\Http\Controllers\SenderController;
 use App\Http\Controllers\CourierController;
 use App\Http\Controllers\TableController;
+use App\Http\Controllers\SampleDownloadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,3 +73,8 @@ Route::any('delete-catagories/{id}', [TableController::class, 'destroyCatagories
 Route::get('edit-company/{id}', [TableController::class, 'editforCompany']);
 Route::put('updated-company', [TableController::class, 'updateforCompany']);
 Route::any('delete-forcompany/{id}', [TableController::class, 'destroyforCompany']);
+////////
+Route::get('/sample-sender',[SampleDownloadController::class, 'senderSample']);
+Route::get('/sample-courier',[SampledownloadController::class, 'courierCompaniesSample']);
+Route::get('/sample-category',[SampleDownloadController::class, 'catagoreisSample']);
+Route::get('/sample-for',[SampleDownloadController::class, 'forSample']);

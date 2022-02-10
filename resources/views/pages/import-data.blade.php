@@ -20,10 +20,13 @@
                                 <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
                                 <li class="breadcrumb-item active" aria-current="page"><a href="javascript:void(0);">Import Masters</a></li>
                              </ol>
+                             
                         </nav>
+                        <!-- Lage modal -->
+                        <button type="button" class="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target=".bd-example-modal-lg">Sample</button>
                     </div>
                     
-                  
+                   
 
                     <div class="row layout-top-spacing">
                         <div id="modalVerticallyCentered" class="col-lg-12 layout-spacing">
@@ -85,7 +88,9 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="submit" class="btn btn-primary"><span class="indicator-label">Save</span>
+		                            <span class="indicator-progress" style="display: none;">Please wait...
+	                            	<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span></button> 
                                                 </div>
                                              </form>
                                             </div>
@@ -105,4 +110,26 @@
                 </div>
 
 
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="myLargeModalLabel">Sample</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                <a class="btn btn-primary" href="{{url('/sample-sender')}}" role="button" style="margin-left: 103px;">Sender Import</a> ||
+												<a class="btn btn-primary" href="{{url('/sample-courier')}}" role="button">Courier Companies</a> ||
+												<a class="btn btn-primary" href="{{url('/sample-category')}}" role="button">Catagories</a> ||
+												<a class="btn btn-primary" href="{{url('/sample-for')}}" role="button">For</a>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 @endsection
